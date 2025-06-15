@@ -20,9 +20,47 @@
       color: #f87171;
       transition: color 0.3s ease-in-out;
     }
+    .loader {
+      background-color: #0f172a;
+      position: fixed;
+      z-index: 10000;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loader img {
+      width: 80px;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-white">
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <img src="Black-Hills-Logo.webp" alt="Loading Logo">
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      if (loader) {
+        loader.style.display = 'none';
+      }
+    });
+  </script>
+
   <!-- Navigation Bar -->
   <nav class="bg-black bg-opacity-90 text-white sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
