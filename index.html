@@ -58,16 +58,19 @@
     <img src="Black-Hills-Logo.webp" alt="Loading Logo">
   </div>
 
-  <script>
-  const audio = new Audio('loading-sound.mp3'); // Replace with your actual file name
+<script>
   window.addEventListener('load', () => {
+    const audio = new Audio('/loading-sound.mp3'); // LOCAL file path
     setTimeout(() => {
       const loader = document.getElementById('loader');
       if (loader) {
         loader.classList.add('fade-out');
-        audio.play();
+        audio.volume = 0.5; // optional: control volume
+        audio.play().catch((err) => {
+          console.log('Autoplay prevented:', err);
+        });
       }
-    }, 1500); // 1.5 seconds
+    }, 1500);
   });
 </script>
 
