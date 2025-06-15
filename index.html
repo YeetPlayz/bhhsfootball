@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Black Hills Football</title>
   <link rel="icon" href="Black-Hills-Logo.webp" type="image/webp" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer>  
+</script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
@@ -40,7 +41,7 @@
     }
     .loader img {
       width: 80px;
-      animation: pulse 1.5s infinite ease-in-out;
+      animation: pulse 1s infinite ease-in-out;
     }
     @keyframes pulse {
       0%, 100% {
@@ -55,20 +56,18 @@
 <body class="bg-gray-100 text-white">
   <!-- Loading Screen -->
   <div class="loader" id="loader">
-    <img src="Black-Hills-Logo.webp" alt="Loading Logo">
-  </div>
+  <img src="Black-Hills-Logo.webp" alt="Loading Logo">
+</div>
+</div>
 
   <script>
-  const audio = new Audio('loading-sound.mp3'); // Replace with your actual file name
   window.addEventListener('load', () => {
     setTimeout(() => {
       const loader = document.getElementById('loader');
       if (loader) {
         loader.classList.add('fade-out');
-        audio.play();
-      }
-    }, 1500); // 1.5 seconds
-  });
+    }, 1500);
+      });
 </script>
 
   <!-- Navigation Bar -->
