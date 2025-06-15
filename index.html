@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Black Hills Football</title>
   <link rel="icon" href="Black-Hills-Logo.webp" type="image/webp" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer>  enterBtn.addEventListener('click', () => {
+    audio.volume = 0.6;
+    audio.play();
+    document.getElementById('loader').style.display = 'none';
+  });
+</script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
@@ -55,24 +60,25 @@
 <body class="bg-gray-100 text-white">
   <!-- Loading Screen -->
   <div class="loader" id="loader">
+  <div class="flex flex-col items-center">
     <img src="Black-Hills-Logo.webp" alt="Loading Logo">
+    <button id="enterSite" class="hidden text-white font-bold text-lg mt-4 px-4 py-2 bg-red-600 rounded">Enter</button>
   </div>
+</div>
 
-<script>
+  <script>
+  const audio = new Audio('/loading-sound.mp3');
+  const enterBtn = document.getElementById('enterSite');
+
   window.addEventListener('load', () => {
-    const audio = new Audio('/loading-sound.mp3'); // LOCAL file path
-    setTimeout(() => {
+    setTimeout(() => {() => {
       const loader = document.getElementById('loader');
       if (loader) {
         loader.classList.add('fade-out');
-        audio.volume = 0.5; // optional: control volume
-        audio.play().catch((err) => {
-          console.log('Autoplay prevented:', err);
-        });
-      }
+      enterBtn.classList.remove('hidden');
     }, 1500);
-  });
-</script>
+    });
+  </script>
 
   <!-- Navigation Bar -->
   <nav class="bg-black bg-opacity-90 text-white sticky top-0 z-50">
