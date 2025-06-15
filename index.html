@@ -31,6 +31,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      opacity: 1;
+      transition: opacity 1s ease-out;
+    }
+    .loader.fade-out {
+      opacity: 0;
+      pointer-events: none;
     }
     .loader img {
       width: 80px;
@@ -57,9 +63,9 @@
       setTimeout(() => {
         const loader = document.getElementById('loader');
         if (loader) {
-          loader.style.display = 'none';
+          loader.classList.add('fade-out');
         }
-      }, 5000); // 5 seconds
+      }, 3000); // 3 seconds
     });
   </script>
 
