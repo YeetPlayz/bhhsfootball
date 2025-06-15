@@ -13,26 +13,9 @@
     .hero-gradient {
       background: linear-gradient(to right, #0f172a, #1a1a1a);
     }
-    body {
-      position: relative;
-      cursor: default;
-    }
-    .cursor-glow {
-      position: fixed;
-      pointer-events: none;
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(30, 58, 138, 0.15) 0%, rgba(0, 0, 0, 0) 80%);
-      border-radius: 100%;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      transition: transform 0.05s ease-out;
-    }
   </style>
 </head>
 <body class="bg-gray-100 text-white">
-  <div class="cursor-glow" id="cursor-glow"></div>
-
   <!-- Navigation Bar -->
   <nav class="bg-black bg-opacity-90 text-white sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -68,7 +51,7 @@
   </section>
 
   <!-- Welcome Section -->
-  <section class="py-20 bg-gray-100 text-center text-black relative -mt-48 md:-mt-64 z-20" id="welcome">
+  <section class="py-24 bg-gray-100 text-center text-black relative -mt-24 md:-mt-40 z-20" id="welcome">
     <div class="max-w-4xl mx-auto px-6 rounded-lg shadow-xl bg-white py-12" data-aos="fade-up">
       <h2 class="text-3xl font-bold mb-4">Welcome to Black Hills Football</h2>
       <p class="text-lg">Explore the latest news, schedules, and resources for our student-athletes, families, and fans.</p>
@@ -82,12 +65,5 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-  <script>
-    const glow = document.getElementById("cursor-glow");
-    document.addEventListener("mousemove", (e) => {
-      glow.style.left = `${e.clientX}px`;
-      glow.style.top = `${e.clientY}px`;
-    });
-  </script>
 </body>
 </html>
