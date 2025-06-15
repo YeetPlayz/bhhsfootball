@@ -59,17 +59,17 @@
   </div>
 
   <script>
-    const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-arcade-video-game-bonus-2044.mp3');
-    window.addEventListener('load', () => {
-      setTimeout(() => {
+  const audio = new Audio('loading-sound.mp3'); // Replace with your actual file name
+  window.addEventListener('load', () => {
+    setTimeout(() => {
       const loader = document.getElementById('loader');
       if (loader) {
         loader.classList.add('fade-out');
         audio.play();
       }
-    }, 1500);
-    });
-  </script>
+    }, 1500); // 1.5 seconds
+  });
+</script>
 
   <!-- Navigation Bar -->
   <nav class="bg-black bg-opacity-90 text-white sticky top-0 z-50">
