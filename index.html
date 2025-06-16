@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Black Hills Football</title>
   <link rel="icon" href="Black-Hills-Logo.webp" type="image/webp" />
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer>  
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
@@ -44,35 +43,29 @@
       animation: pulse 1.5s infinite ease-in-out;
     }
     @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
     }
   </style>
 </head>
 <body class="bg-gray-100 text-white">
-  <!-- Loading Screen -->
   <div class="loader" id="loader">
-  <img src="Black-Hills-Logo.webp" alt="Loading Logo">
-</div>
-</div>
+    <img src="Black-Hills-Logo.webp" alt="Loading Logo">
+  </div>
 
   <script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const loader = document.getElementById('loader');
-      if (loader) {
-        loader.classList.add('fade-out');
-      }
-    }, 1000);
-  });
-</script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) {
+          loader.classList.add('fade-out');
+        }
+      }, 1000);
+    });
+  </script>
 
   <!-- Navigation Bar -->
-  <nav class="bg-red-900 bg-opacity-90 text-white sticky top-0 z-50">
+  <nav class="bg-black bg-opacity-90 text-white sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-3">
         <img src="Black-Hills-Logo.webp" alt="Logo" class="w-8 h-8">
@@ -96,54 +89,61 @@
         <h2 class="text-3xl sm:text-5xl font-extrabold text-red-600 uppercase">Wolves Never Back Down</h2>
         <h3 class="text-2xl sm:text-4xl font-bold text-white mt-2 uppercase tracking-wide">Every Snap. Every Play.</h3>
         <p class="text-base text-gray-200 mt-4 max-w-md">Fueling a legacy of heart, hustle, and hometown pride. Welcome to Black Hills Football.</p>
-        <a href="#welcome" class="mt-6 inline-block bg-red-600 text-white px-6 py-3 rounded-full text-base font-semibold transition hover:bg-red-700">Enter Site</a>
+        <div class="mt-6 flex justify-center md:justify-start">
+          <a href="#welcome" class="bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700">Enter Site</a>
+          <a href="#schedule" class="ml-4 bg-white text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">See Schedule</a>
+        </div>
       </div>
       <div class="relative z-0" data-aos="fade-left">
         <img src="465279373_541521255513632_3037558685347083352_n-removebg.png" alt="Player" class="w-full max-w-[550px] mx-auto md:mx-0">
       </div>
     </div>
+    <!-- Scroll Down Indicator -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-white text-2xl">
+      ↓
+    </div>
   </section>
 
   <!-- Welcome Section -->
-  <section class="py-24 bg-white text-center text-blue-900 relative z-20" id="welcome">
-  <div class="max-w-4xl mx-auto px-6 rounded-lg shadow-xl bg-white py-12" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-4">Welcome to Black Hills Football</h2>
-    <p class="text-lg">Explore the latest news, schedules, and resources for our student-athletes, families, and fans.</p>
-  </div>
-</section>
+  <section class="py-24 bg-[#1e3a8a] text-center text-white relative -mt-24 md:-mt-40 z-20" id="welcome">
+    <div class="max-w-4xl mx-auto px-6 rounded-lg shadow-xl bg-[#1e3a8a] py-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4">Welcome to Black Hills Football</h2>
+      <p class="text-lg">Explore the latest news, schedules, and resources for our student-athletes, families, and fans.</p>
+    </div>
+  </section>
 
   <!-- Hype Video Section -->
   <section class="relative py-24 bg-gray-900 text-white text-center" id="hype">
-  <div class="max-w-5xl mx-auto px-6" data-aos="zoom-in">
-    <div class="relative bg-[#1e3a8a] p-6 rounded-lg shadow-2xl">
-      <h2 class="text-4xl font-extrabold mb-6">Get Hyped for the Season</h2>
-      <video controls class="rounded-lg shadow-lg w-full max-w-4xl mx-auto">
-        <source src="hype-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="max-w-5xl mx-auto px-6" data-aos="zoom-in">
+      <div class="relative bg-[#1e3a8a] p-6 rounded-lg shadow-2xl">
+        <h2 class="text-4xl font-extrabold mb-6">Get Hyped for the Season</h2>
+        <video controls class="rounded-lg shadow-lg w-full max-w-4xl mx-auto">
+          <source src="hype-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer class="py-10 bg-black text-white font-bold">
-  <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-start text-sm px-6 gap-6">
-    <div class="space-y-1">
-      <p class="text-lg">Black Hills Wolves - Varsity Football</p>
-      <p>7741 Littlerock Rd SW</p>
-      <p>Olympia WA 98512</p>
-      <p>Phone: (360) 709-7800</p>
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-start text-sm px-6 gap-6">
+      <div class="space-y-1">
+        <p class="text-lg">Black Hills Wolves - Varsity Football</p>
+        <p>7741 Littlerock Rd SW</p>
+        <p>Olympia WA 98512</p>
+        <p>Phone: (360) 709-7800</p>
+      </div>
+      <div class="space-y-1">
+        <p>Principal: <a href="mailto:dave.myers@tumwater.k12.wa.us" class="footer-email underline">dave.myers@tumwater.k12.wa.us</a></p>
+        <p>Athletic Director: <a href="mailto:nicole.nelson@tumwater.k12.wa.us" class="footer-email underline">nicole.nelson@tumwater.k12.wa.us</a></p>
+        <p>Head Coach: <a href="mailto:thomas.spray@tumwater.k12.wa.us" class="footer-email underline">thomas.spray@tumwater.k12.wa.us</a></p>
+      </div>
+      <div class="mt-4 w-full md:w-auto">
+        <img src="nike.png" alt="Nike Logo" class="mx-auto w-16 opacity-90">
+      </div>
     </div>
-    <div class="space-y-1">
-      <p>Principal: <a href="mailto:dave.myers@tumwater.k12.wa.us" class="footer-email underline">dave.myers@tumwater.k12.wa.us</a></p>
-      <p>Athletic Director: <a href="mailto:nicole.nelson@tumwater.k12.wa.us" class="footer-email underline">nicole.nelson@tumwater.k12.wa.us</a></p>
-      <p>Head Coach: <a href="mailto:thomas.spray@tumwater.k12.wa.us" class="footer-email underline">thomas.spray@tumwater.k12.wa.us</a></p>
-    </div>
-    <div class="mt-4 w-full md:w-auto">
-      <img src="nike.png" alt="Nike Logo" class="mx-auto w-16 opacity-90">
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
